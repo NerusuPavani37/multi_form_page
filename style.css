@@ -1,0 +1,466 @@
+
+  :root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+  }
+  *{
+    box-sizing: border-box;
+  }
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+  margin: 0;
+  background-image: url(./assets/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 100%;
+  background-color:rgb(172, 172, 238);
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10%;
+
+}
+
+.btns div{
+  border:2px solid white;
+  border-radius: 55px;
+  background-color: transparent;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: var(--White);
+}
+
+.btns .btn1{
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
+}
+
+.container{
+  margin: 8% 6%;
+  /* display: none; */
+}
+
+.personalInfo{
+  background-color:var(--White); 
+  border: 1px solid white;
+  border-radius: 6px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.personalInfo h2,
+.personalInfo p,
+.personalInfo .forms{
+  padding-left: 5%;
+  padding-right: 15%;
+}
+
+.personalInfo h2{
+  color: var(--marine-blue);
+}
+
+.personalInfo p{
+  font-weight: 200;
+  color: var(--Light-gray);
+}
+
+label{
+  font-size: 15px;
+  color: var(--marine-blue);
+  margin-bottom: 5px;
+}
+
+label#error{
+  color: red;
+  margin-left: 8rem;
+  margin-bottom: -6%;
+  visibility: hidden;
+}
+input{
+  padding: 8px;
+}
+  .forms{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    
+  }
+#form1,
+#form2,
+#form3{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.some{
+  background-color: white;
+  padding: 3%;
+}
+
+.some button{
+  padding: 10px 18px;
+  background-color: var(--marine-blue);
+  border: none;
+  color: var(--White);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.some .next_btn{
+  float: right;
+}
+
+.some .back_btn{
+  visibility: hidden;
+}
+.container2{
+  margin: 8% 6% 20%;
+  background-color: white;
+  display:none;
+  border-radius: 5px;
+}
+
+.plan{
+  padding: 1rem;
+}
+
+.plan .para{
+  padding-right: 9rem;
+  color: var(--Cool-gray);
+}
+
+.plan .options{
+  display: flex;
+  flex-direction: column;
+}
+
+.plan .options .arcade,
+.plan .options .advanced,
+.plan .options .pro{
+  cursor: pointer;
+  border: 2px solid gray;
+  border-radius: 0.5rem;
+  display: flex;
+  gap:1rem;
+  padding-left: 1rem; 
+  margin-bottom: 2rem;
+}
+
+
+.plan .options .arcade img,
+.plan .options .advanced img,
+.plan .options .pro img{
+  width: 3rem;
+}
+
+.plan .options .arcade .price{
+  align-self: last baseline;
+  margin-top: 3rem;
+  margin-left: -4.4rem;
+}
+
+.plan .options .advanced .price{
+  align-self: last baseline;
+  margin-top: 3rem;
+  margin-left: -5.7rem;
+}
+
+.plan .options .pro .price{
+  align-self: last baseline;
+  margin-top: 3rem;
+  margin-left: -2.7rem;
+}
+
+.plan .options .arcade h4,
+.plan .options .advanced h4,
+.plan .options .pro h4{
+  color: var(--marine-blue);
+}
+.plan .options .price{
+  font-size: 0.9rem;
+  color: var(--Cool-gray);
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+}
+
+/* Hide the checkbox input */
+.toggle input {
+  display: none;
+}
+
+/* Describe slider's look and position. */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--marine-blue);
+  transition: 0.4s;
+  border-radius: 35px;
+}
+
+/* Describe the white ball's location 
+    and appearance in the slider. */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Modify the slider's background color to 
+    green once the checkbox has been selected. */
+input:checked + .slider {
+  background-color: var(--marine-blue);
+}
+
+/* When the checkbox is checked, shift the 
+    white ball towards the right within the slider. */
+input:checked + .slider:before {
+  transform: translateX(27px);
+}
+
+.selection{
+  background-color: rgb(224, 230, 245);
+  border: none;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  /* margin-bottom: 20px;  */
+}
+
+.selection label{
+  margin-top: 1rem;
+}
+
+.selection  h4{
+  color: var(--Cool-gray);
+}
+
+.anually{
+  visibility: hidden;
+}
+
+.container3{
+  display: none;
+  margin: 8% 6% 20%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.addOns{
+  padding: 1rem;
+}
+
+.addOns .para{
+  padding-right: 12rem;
+  color: var(--Cool-gray);
+}
+
+.addOns .addOptions {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.addOns .addOptions .onlineservices,
+.addOns .addOptions .largerstorage,
+.addOns .addOptions .profile{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.7);
+}
+
+.addOns .addOptions .onlineservices .matter h4,
+.addOns .addOptions .largerstorage .matter h4,
+.addOns .addOptions .profile .matter h4{
+  color: var(--marine-blue);
+  font-size: 16px; 
+}
+
+.addOns .addOptions .onlineservices .matter p,
+.addOns .addOptions .largerstorage .matter p,
+.addOns .addOptions .profile .matter p{
+  font-size: 12px;
+  margin-top: -1rem;
+  color: var(--Cool-gray);
+}
+
+.addOns .addOptions  .pricesMon{
+  margin-top: 1.5rem;
+}
+
+.addOns .addOptions  .pricesYr{
+  margin-top: 1.5rem;
+  display: none;
+}
+
+
+.container4{
+  display: none;
+  margin: 8% 6% 20%;
+  background-color:white;
+  border-radius: 5px;
+}
+
+.finish{
+  padding: 1rem;
+}
+
+.finish .para{
+  padding-right: 4rem;
+  color: var(--Cool-gray);
+  font-size: 14px;
+}
+
+.finish h2{
+  color: var(--marine-blue);
+}
+
+.finish .list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Alabaster);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+}
+
+.finish .list .heading{
+  border-bottom: 1px solid gray;
+  color: var(--marine-blue);
+}
+.finish .list .heading p{
+  font-size: 13px;
+  text-decoration: underline;
+  position: absolute;
+  margin-top: 2.3rem;
+  color: var(--Cool-gray);
+  cursor: pointer;
+}
+
+.online h5,
+.local h5,
+.total h5,
+.customizedProfile h5{
+  color: var(--Cool-gray);
+}
+
+.total h5{
+ padding-left: 1rem;
+}
+
+.heading span{
+  margin-top: 1.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--marine-blue);
+}
+
+.heading,
+.total{
+  visibility: hidden;
+}
+
+.online ,
+.local,
+.total,
+.heading,
+.customizedProfile{
+  display: flex;
+  justify-content: space-between;
+}
+
+.online ,
+.local,
+.customizedProfile{
+  /* visibility: hidden; */
+  display: none;
+}
+
+.online span,
+.local span,
+.total span,
+.customizedProfile span{
+  font-size: 13px;
+  float: right;
+  margin-top: -2.5rem;
+}
+
+.total span{
+  margin-top: 1.3rem;
+  margin-right: 1rem;
+  font-weight: 600;
+  color: var(--purplish-blue);
+}
+
+
+.container5{
+  display: none;
+  margin: 8% 6% 20%;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container5 .thanks{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.container5 .thanks img{
+   width: 24%;
+   align-self: center;
+}
+
+.container5 .thanks h2{
+  color: var(--marine-blue);
+  margin-bottom: 0;
+}
+
+.container5 .thanks p{
+  font-weight: 500;
+  color: var(--Cool-gray);
+}
