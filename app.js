@@ -133,9 +133,11 @@ btn.addEventListener('click', function(e){
     ct++;
     if(ct==4){
       nextBtn.textContent='Confirm';
+      nextBtn.style.backgroundColor='var(--purplish-blue)';
     }
     else{
       nextBtn.textContent='Next Step';
+      nextBtn.style.backgroundColor='var(--marine-blue)'
     }
   }
   else if(target.matches('.back_btn') && ct==4){
@@ -149,6 +151,7 @@ btn.addEventListener('click', function(e){
     ct--;
     if(ct<4){
       nextBtn.textContent='Next Step';
+      nextBtn.style.backgroundColor='var(--marine-blue)'
     }
   }
   else if(target.matches('.next_btn') && ct==4){
@@ -183,6 +186,7 @@ function allChecked(){
 
 const options = document.querySelector('.options');
 
+
 options.addEventListener('click', function(e) {
   const target = e.target;
   const arcade = document.querySelector('.arcade');
@@ -195,6 +199,8 @@ options.addEventListener('click', function(e) {
 
   const heading=document.querySelector('.heading');
   const total=document.querySelector('.total');
+  const totalSpan=document.querySelector('.total span');
+
 
   const headingName=document.querySelector(".heading h5")
   const headingPrice=document.querySelector('.heading span');
@@ -203,6 +209,12 @@ options.addEventListener('click', function(e) {
     advanced.style.borderColor = 'grey';
     pro.style.borderColor = 'grey';
     target.style.borderColor = 'blue';
+
+    arcade.style.backgroundColor = '';
+    advanced.style.backgroundColor = '';
+    pro.style.backgroundColor = '';
+    target.style.backgroundColor ='var(--light-blue)'
+
 
     headingName.textContent='Arcade(Monthly)'
 
@@ -227,6 +239,12 @@ options.addEventListener('click', function(e) {
     pro.style.borderColor = 'grey';
     target.style.borderColor = 'blue';
 
+    arcade.style.backgroundColor = '';
+    advanced.style.backgroundColor = '';
+    pro.style.backgroundColor = '';
+    target.style.backgroundColor = 'var(--light-blue)';
+
+
     headingName.textContent='Advanced(Monthly)'
  
     heading.style.visibility='visible';
@@ -248,6 +266,12 @@ options.addEventListener('click', function(e) {
     advanced.style.borderColor = 'grey';
     pro.style.borderColor = 'grey';
     target.style.borderColor = 'blue';
+
+    arcade.style.backgroundColor = '';
+    advanced.style.backgroundColor = '';
+    pro.style.backgroundColor = '';
+    target.style.backgroundColor ='var(--light-blue)';
+
 
     headingName.textContent='Pro(Monthly)'
 
@@ -318,10 +342,15 @@ const profileSpan=document.querySelector('.customizedProfile span');
   onlineSpan.textContent='+$1/mo';
   storageSpan.textContent='+$2/mo';
   profileSpan.textContent='+$2/mo';
-
-  console.log("hhhh");
-  
  }
+
+ if(toggleSwitch.checked){
+  totalSpan.textContent=`$${sampleCt+sampleCt2}/yr`;
+}
+else{
+  totalSpan.textContent=`$${sampleCt+sampleCt2}/mo`;
+}
+
 });
 
 
@@ -387,10 +416,12 @@ addOptions.addEventListener('click', function(e) {
 function toggleBorderColor(element1,element2) {
   if (element1.style.borderColor === 'blue') {
     element1.style.borderColor = '';
+    element1.style.backgroundColor='';
     element2.style.display='none';
     
   } else {
     element1.style.borderColor = 'blue';
+    element1.style.backgroundColor='var(--light-blue)'
     element2.style.display='block';
   }
 }
