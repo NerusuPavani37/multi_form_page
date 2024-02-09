@@ -1,42 +1,40 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
 
-  :root {
-    --marine-blue: hsl(213, 96%, 18%);
-    --purplish-blue: hsl(243, 100%, 62%);
-    --pastel-blue: hsl(228, 100%, 84%);
-    --light-blue: hsl(206, 94%, 87%);
-    --strawberry-red: hsl(354, 84%, 57%);
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+}
 
-    --Cool-gray: hsl(231, 11%, 63%);
-    --Light-gray: hsl(229, 24%, 87%);
-    --Magnolia: hsl(217, 100%, 97%);
-    --Alabaster: hsl(231, 100%, 99%);
-    --White: hsl(0, 0%, 100%);
-  }
-  *{
-    box-sizing: border-box;
-  }
-
-body{
-  font-family: 'Ubuntu', sans-serif;
+body {
+  font-family: "Ubuntu", sans-serif;
   width: 100%;
   margin: 0;
   background-image: url(./assets/images/bg-sidebar-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 100%;
-  background-color:var(--light-blue);
+  background-color: var(--light-blue);
 }
 
-.btns{
+.btns {
   display: flex;
   justify-content: center;
   gap: 20px;
   padding-top: 10%;
-
 }
 
-.btns div{
-  border:2px solid white;
+.btns div {
+  border: 2px solid white;
   border-radius: 55px;
   background-color: transparent;
   padding: 10px 15px;
@@ -44,18 +42,17 @@ body{
   color: var(--White);
 }
 
-.btns .btn1{
+.btns .btn1 {
   background-color: var(--light-blue);
   color: var(--marine-blue);
 }
 
-.container{
+.container {
   margin: 8% 6%;
-  /* display: none; */
 }
 
-.personalInfo{
-  background-color:var(--White); 
+.personalInfo {
+  background-color: var(--White);
   border: 1px solid white;
   border-radius: 6px;
   padding-top: 30px;
@@ -64,60 +61,59 @@ body{
 
 .personalInfo h2,
 .personalInfo p,
-.personalInfo .forms{
+.personalInfo .forms {
   padding-left: 5%;
   padding-right: 15%;
 }
 
-.personalInfo h2{
+.personalInfo h2 {
   color: var(--marine-blue);
 }
 
-.personalInfo p{
+.personalInfo p {
   font-weight: 200;
   color: var(--Light-gray);
 }
 
-label{
+label {
   font-size: 15px;
   color: var(--marine-blue);
   margin-bottom: 5px;
 }
 
-label#error{
+label#error {
   color: red;
   margin-left: 8rem;
   margin-bottom: -6%;
   visibility: hidden;
 }
-input{
+input {
   padding: 8px;
 }
-  .forms{
-    display: flex;
-    flex-direction: column;
-    /* background-color: red; */
-    
-  }
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
 #form1,
 #form2,
-#form3{
+#form3 {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-footer{
+footer {
   width: 100%;
   position: fixed;
   bottom: 0;
 }
-.some{
+.some {
   background-color: white;
   padding: 3%;
 }
 
-.some button{
+.some button {
   padding: 10px 18px;
   background-color: var(--marine-blue);
   border: none;
@@ -126,66 +122,65 @@ footer{
   cursor: pointer;
 }
 
-.some .next_btn{
+.some .next_btn {
   float: right;
 }
 
-.some .back_btn{
+.some .back_btn {
   visibility: hidden;
 }
-.container2{
+.container2 {
   margin: 8% 6% 20%;
   background-color: white;
-  display:none;
+  display: none;
   border-radius: 5px;
 }
 
-.plan{
+.plan {
   padding: 1rem;
 }
 
-.plan .para{
+.plan .para {
   padding-right: 9rem;
   color: var(--Cool-gray);
 }
 
-.plan .options{
+.plan .options {
   display: flex;
   flex-direction: column;
 }
 
 .plan .options .arcade,
 .plan .options .advanced,
-.plan .options .pro{
+.plan .options .pro {
   cursor: pointer;
   border: 2px solid gray;
   border-radius: 0.5rem;
   display: flex;
-  gap:1rem;
-  padding-left: 1rem; 
+  gap: 1rem;
+  padding-left: 1rem;
   margin-bottom: 2rem;
 }
 
-
 .plan .options .arcade img,
 .plan .options .advanced img,
-.plan .options .pro img{
+.plan .options .pro img {
   width: 3rem;
 }
 
-.plan .options .arcade .price{
+.plan .options .arcade .price {
   align-self: last baseline;
   margin-top: 3rem;
   margin-left: -4.4rem;
 }
 
-.plan .options .advanced .price{
+.plan .options .advanced .price {
   align-self: last baseline;
   margin-top: 3rem;
   margin-left: -5.7rem;
 }
 
-.plan .options .pro .price{
+.plan .options .pro .price {
   align-self: last baseline;
   margin-top: 3rem;
   margin-left: -2.7rem;
@@ -193,10 +188,10 @@ footer{
 
 .plan .options .arcade h4,
 .plan .options .advanced h4,
-.plan .options .pro h4{
+.plan .options .pro h4 {
   color: var(--marine-blue);
 }
-.plan .options .price{
+.plan .options .price {
   font-size: 0.9rem;
   color: var(--Cool-gray);
 }
@@ -252,40 +247,39 @@ input:checked + .slider:before {
   transform: translateX(27px);
 }
 
-.selection{
+.selection {
   background-color: rgb(224, 230, 245);
   border: none;
   border-radius: 0.7rem;
   display: flex;
   justify-content: center;
   gap: 35px;
-  /* margin-bottom: 20px;  */
 }
 
-.selection label{
+.selection label {
   margin-top: 1rem;
 }
 
-.selection  h4{
+.selection h4 {
   color: var(--Cool-gray);
 }
 
-.anually{
+.anually {
   visibility: hidden;
 }
 
-.container3{
+.container3 {
   display: none;
   margin: 8% 6% 20%;
   background-color: white;
   border-radius: 5px;
 }
 
-.addOns{
+.addOns {
   padding: 1rem;
 }
 
-.addOns .para{
+.addOns .para {
   padding-right: 12rem;
   color: var(--Cool-gray);
 }
@@ -293,12 +287,11 @@ input:checked + .slider:before {
 .addOns .addOptions {
   display: flex;
   flex-direction: column;
-
 }
 
 .addOns .addOptions .onlineservices,
 .addOns .addOptions .largerstorage,
-.addOns .addOptions .profile{
+.addOns .addOptions .profile {
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
@@ -314,47 +307,46 @@ input[type="checkbox"] {
 
 .addOns .addOptions .onlineservices .matter h4,
 .addOns .addOptions .largerstorage .matter h4,
-.addOns .addOptions .profile .matter h4{
+.addOns .addOptions .profile .matter h4 {
   color: var(--marine-blue);
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .addOns .addOptions .onlineservices .matter p,
 .addOns .addOptions .largerstorage .matter p,
-.addOns .addOptions .profile .matter p{
+.addOns .addOptions .profile .matter p {
   font-size: 12px;
   margin-top: -1rem;
   color: var(--Cool-gray);
 }
 
-.addOns .addOptions  .pricesMon{
+.addOns .addOptions .pricesMon {
   margin-top: 1.5rem;
 }
 
-.addOns .addOptions  .pricesYr{
+.addOns .addOptions .pricesYr {
   margin-top: 1.5rem;
   display: none;
 }
 
-
-.container4{
+.container4 {
   display: none;
   margin: 8% 6% 20%;
-  background-color:white;
+  background-color: white;
   border-radius: 5px;
 }
 
-.finish{
+.finish {
   padding: 1rem;
 }
 
-.finish .para{
+.finish .para {
   padding-right: 4rem;
   color: var(--Cool-gray);
   font-size: 14px;
 }
 
-.finish h2{
+.finish h2 {
   color: var(--marine-blue);
 }
 
@@ -367,11 +359,11 @@ input[type="checkbox"] {
   border-radius: 5px;
 }
 
-.finish .list .heading{
+.finish .list .heading {
   border-bottom: 1px solid gray;
   color: var(--marine-blue);
 }
-.finish .list .heading p{
+.finish .list .heading p {
   font-size: 13px;
   text-decoration: underline;
   position: absolute;
@@ -383,15 +375,15 @@ input[type="checkbox"] {
 .online h5,
 .local h5,
 .total h5,
-.customizedProfile h5{
+.customizedProfile h5 {
   color: var(--Cool-gray);
 }
 
-.total h5{
- padding-left: 1rem;
+.total h5 {
+  padding-left: 1rem;
 }
 
-.heading span{
+.heading span {
   margin-top: 1.5rem;
   font-size: 14px;
   font-weight: 600;
@@ -399,22 +391,22 @@ input[type="checkbox"] {
 }
 
 .heading,
-.total{
+.total {
   visibility: hidden;
 }
 
-.online ,
+.online,
 .local,
 .total,
 .heading,
-.customizedProfile{
+.customizedProfile {
   display: flex;
   justify-content: space-between;
 }
 
-.online ,
+.online,
 .local,
-.customizedProfile{
+.customizedProfile {
   /* visibility: hidden; */
   display: none;
 }
@@ -422,21 +414,20 @@ input[type="checkbox"] {
 .online span,
 .local span,
 .total span,
-.customizedProfile span{
+.customizedProfile span {
   font-size: 13px;
   float: right;
   margin-top: -2.5rem;
 }
 
-.total span{
+.total span {
   margin-top: 1.3rem;
   margin-right: 1rem;
   font-weight: 600;
   color: var(--purplish-blue);
 }
 
-
-.container5{
+.container5 {
   display: none;
   margin: 8% 6% 20%;
   background-color: white;
@@ -444,23 +435,23 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-.container5 .thanks{
+.container5 .thanks {
   display: flex;
   flex-direction: column;
   padding: 3rem;
 }
 
-.container5 .thanks img{
-   width: 24%;
-   align-self: center;
+.container5 .thanks img {
+  width: 24%;
+  align-self: center;
 }
 
-.container5 .thanks h2{
+.container5 .thanks h2 {
   color: var(--marine-blue);
   margin-bottom: 0;
 }
 
-.container5 .thanks p{
+.container5 .thanks p {
   font-weight: 500;
   color: var(--Cool-gray);
 }
