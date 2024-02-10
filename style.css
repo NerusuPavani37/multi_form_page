@@ -176,11 +176,7 @@ footer {
   margin-bottom: 2rem;
 }
 
-.plan .options .arcade:hover,
-.plan .options .advanced:hover,
-.plan .options .pro:hover {
-  background-color: var(--Light-gray);
-}
+
 
 .plan .options .arcade img,
 .plan .options .advanced img,
@@ -306,11 +302,6 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
-.addOns .addOptions .onlineservices:hover,
-.addOns .addOptions .largerstorage:hover,
-.addOns .addOptions .profile:hover {
-  background-color: var(--Light-gray);
-}
 input[type="checkbox"] {
   transform: scale(1.7);
 }
@@ -584,6 +575,12 @@ input[type="checkbox"] {
     flex-direction: column;
     width: 30%;
   }
+
+  .plan .options .arcade:hover,
+  .plan .options .advanced:hover,
+  .plan .options .pro:hover {
+    background-color: var(--Light-gray);
+  }
   .plan .options .arcade img,
   .plan .options .advanced img,
   .plan .options .pro img {
@@ -609,7 +606,11 @@ input[type="checkbox"] {
   .addOns .addOptions .profile {
     margin-bottom: 3rem;
   }
-
+  .plan .options .arcade:hover,
+  .plan .options .advanced:hover,
+  .plan .options .pro:hover {
+    background-color: var(--Light-gray);
+  }
   .finish {
     padding: 4rem;
   }
