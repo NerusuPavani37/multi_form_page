@@ -42,6 +42,10 @@ body {
   color: var(--White);
 }
 
+.side-bar-matter {
+  display: none;
+}
+
 .btns .btn1 {
   background-color: var(--light-blue);
   color: var(--marine-blue);
@@ -72,7 +76,7 @@ body {
 
 .personalInfo p {
   font-weight: 200;
-  color: var(--Light-gray);
+  color: var(--Cool-gray);
 }
 
 label {
@@ -81,14 +85,20 @@ label {
   margin-bottom: 5px;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 label#error {
   color: red;
-  margin-left: 8rem;
-  margin-bottom: -6%;
+  /* margin-left: 8rem;
+  margin-bottom: -6%; */
   visibility: hidden;
 }
 input {
   padding: 8px;
+  border-radius: 5px;
 }
 .forms {
   display: flex;
@@ -168,28 +178,15 @@ footer {
   width: 3rem;
 }
 
-.plan .options .arcade .price {
-  align-self: last baseline;
-  margin-top: 3rem;
-  margin-left: -4.4rem;
-}
-
-.plan .options .advanced .price {
-  align-self: last baseline;
-  margin-top: 3rem;
-  margin-left: -5.7rem;
-}
-
-.plan .options .pro .price {
-  align-self: last baseline;
-  margin-top: 3rem;
-  margin-left: -2.7rem;
-}
-
 .plan .options .arcade h4,
 .plan .options .advanced h4,
 .plan .options .pro h4 {
   color: var(--marine-blue);
+  margin-bottom: 0rem;
+}
+.arcade div, .advanced div,
+.pro div{
+  margin-bottom: 1rem;
 }
 .plan .options .price {
   font-size: 0.9rem;
@@ -278,6 +275,10 @@ input:checked + .slider:before {
 .addOns {
   padding: 1rem;
 }
+
+.addOns h2 {
+  color: var(--marine-blue);
+} 
 
 .addOns .para {
   padding-right: 12rem;
@@ -454,4 +455,164 @@ input[type="checkbox"] {
 .container5 .thanks p {
   font-weight: 500;
   color: var(--Cool-gray);
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    height: 100vh;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+  }
+
+  .outer {
+    display: flex;
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .btns {
+    width: 30%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .side-bar-matter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btns1 {
+    margin: 9px;
+    padding: 2rem;
+    display: flex;
+    gap: 20px;
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+  }
+
+  .btns div {
+    margin-bottom: 1rem;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8rem;
+  }
+  .steps p {
+    margin-top: 0;
+    padding-right: 5rem;
+  }
+  .steps .mini-title {
+    font-size: 0.8rem;
+    color: var(--Cool-gray);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .steps .title {
+    font-size: 0.9rem;
+    color: var(--White);
+    font-weight: 600;
+  }
+  .innerMost {
+    position: relative;
+    width: 100%;
+  }
+
+  .some {
+    position: absolute;
+  }
+
+  .some .next_btn {
+    margin-right: 4.8rem;
+  }
+
+  .personalInfo {
+    padding: 3rem;
+  }
+
+  input {
+    padding: 0.7rem 1rem;
+  }
+
+  .container,
+  .container3,
+  .container2,
+  .container4,
+  .container5 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .personalInfo h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .personalInfo p {
+    margin-bottom: 3rem;
+  }
+
+  .plan {
+    padding: 3rem;
+  }
+  .plan .options {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .plan .options .arcade,
+  .plan .options .advanced,
+  .plan .options .pro {
+    flex-direction: column;
+    width: 30%;
+  }
+  .plan .options .arcade img,
+  .plan .options .advanced img,
+  .plan .options .pro img {
+    margin-top: 2rem;
+  }
+
+  .plan .para {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+
+
+
+
+.addOns {
+  padding: 3rem;
+}
+
+
+
+.addOns .para {
+  padding-right: 0;
+  margin-bottom: 3rem;
+}
+
+.addOns .addOptions .onlineservices,
+.addOns .addOptions .largerstorage,
+.addOns .addOptions .profile {
+  margin-bottom: 3rem;
+}
+
+.finish {
+  padding: 4rem;
+}
+
+.finish .para{
+  font-size: 16px;
+}
+
 }
