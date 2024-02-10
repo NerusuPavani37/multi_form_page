@@ -54,12 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const check = allChecked();
 
       if (check) {
-        btn2.style.backgroundColor = "skyblue";
-        btn2.style.color = "black";
-
-        btn1.style.backgroundColor = "transparent";
-        btn1.style.color = "white";
-
+        btnManipulation(btn2, btn1);
         container.style.display = "none";
         container2.style.display = "block";
         ct++;
@@ -74,11 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       backBtn.style.visibility = "visible";
       container.style.display = "block";
       container2.style.display = "none";
-      btn2.style.backgroundColor = "transparent";
-      btn2.style.color = "white";
-      btn1.style.backgroundColor = "skyblue";
-      btn1.style.color = "black";
-
+      btnManipulation(btn1, btn2);
       ct--;
       btnCt--;
       if (btnCt == 0) {
@@ -89,27 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (target.matches(".next_btn") && ct == 2) {
       container3.style.display = "block";
       container2.style.display = "none";
-      btn2.style.backgroundColor = "transparent";
-      btn2.style.color = "white";
-      btn3.style.backgroundColor = "skyblue";
-      btn3.style.color = "black";
+      btnManipulation(btn3, btn2);
       ct++;
     } else if (target.matches(".back_btn") && ct == 3) {
       container2.style.display = "block";
       container3.style.display = "none";
-      btn3.style.backgroundColor = "transparent";
-      btn3.style.color = "white";
-      btn2.style.backgroundColor = "skyblue";
-      btn2.style.color = "black";
-
+      btnManipulation(btn2, btn3);
       ct--;
     } else if (target.matches(".next_btn") && ct == 3) {
       container4.style.display = "block";
       container3.style.display = "none";
-      btn3.style.backgroundColor = "transparent";
-      btn3.style.color = "white";
-      btn4.style.backgroundColor = "skyblue";
-      btn4.style.color = "black";
+      btnManipulation(btn4, btn3);
       ct++;
       if (ct == 4) {
         nextBtn.textContent = "Confirm";
@@ -121,11 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (target.matches(".back_btn") && ct == 4) {
       container3.style.display = "block";
       container4.style.display = "none";
-      btn4.style.backgroundColor = "transparent";
-      btn4.style.color = "white";
-      btn3.style.backgroundColor = "skyblue";
-      btn3.style.color = "black";
-
+      btnManipulation(btn3, btn4);
       ct--;
       if (ct < 4) {
         nextBtn.textContent = "Next Step";
@@ -155,6 +132,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     return checked;
+  }
+
+  //function for btns manipulation
+  function btnManipulation(button1, button2) {
+    console.log("hai");
+    button2.style.backgroundColor = "transparent";
+    button2.style.color = "white";
+    button1.style.backgroundColor = "skyblue";
+    button1.style.color = "black";
   }
 
   //container2 plans selecting

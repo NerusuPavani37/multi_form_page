@@ -92,13 +92,16 @@ label {
 
 label#error {
   color: red;
-  /* margin-left: 8rem;
-  margin-bottom: -6%; */
   visibility: hidden;
 }
 input {
   padding: 8px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+input:hover {
+  background-color: var(--light-blue);
 }
 .forms {
   display: flex;
@@ -117,8 +120,6 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-}
-.some {
   background-color: white;
   padding: 3%;
 }
@@ -137,7 +138,10 @@ footer {
 }
 
 .some .back_btn {
+  background-color: var(--White);
   visibility: hidden;
+  color: var(--Cool-gray);
+  font-weight: 600;
 }
 .container2 {
   margin: 8% 6% 20%;
@@ -172,6 +176,12 @@ footer {
   margin-bottom: 2rem;
 }
 
+.plan .options .arcade:hover,
+.plan .options .advanced:hover,
+.plan .options .pro:hover {
+  background-color: var(--Light-gray);
+}
+
 .plan .options .arcade img,
 .plan .options .advanced img,
 .plan .options .pro img {
@@ -184,8 +194,9 @@ footer {
   color: var(--marine-blue);
   margin-bottom: 0rem;
 }
-.arcade div, .advanced div,
-.pro div{
+.arcade div,
+.advanced div,
+.pro div {
   margin-bottom: 1rem;
 }
 .plan .options .price {
@@ -200,12 +211,11 @@ footer {
   height: 25px;
 }
 
-/* Hide the checkbox input */
+
 .toggle input {
   display: none;
 }
 
-/* Describe slider's look and position. */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -218,8 +228,6 @@ footer {
   border-radius: 35px;
 }
 
-/* Describe the white ball's location 
-    and appearance in the slider. */
 .slider:before {
   position: absolute;
   content: "";
@@ -232,14 +240,10 @@ footer {
   border-radius: 50%;
 }
 
-/* Modify the slider's background color to 
-    green once the checkbox has been selected. */
 input:checked + .slider {
   background-color: var(--marine-blue);
 }
 
-/* When the checkbox is checked, shift the 
-    white ball towards the right within the slider. */
 input:checked + .slider:before {
   transform: translateX(27px);
 }
@@ -278,7 +282,7 @@ input:checked + .slider:before {
 
 .addOns h2 {
   color: var(--marine-blue);
-} 
+}
 
 .addOns .para {
   padding-right: 12rem;
@@ -302,6 +306,11 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
+.addOns .addOptions .onlineservices:hover,
+.addOns .addOptions .largerstorage:hover,
+.addOns .addOptions .profile:hover {
+  background-color: var(--Light-gray);
+}
 input[type="checkbox"] {
   transform: scale(1.7);
 }
@@ -408,7 +417,6 @@ input[type="checkbox"] {
 .online,
 .local,
 .customizedProfile {
-  /* visibility: hidden; */
   display: none;
 }
 
@@ -587,37 +595,31 @@ input[type="checkbox"] {
     margin-bottom: 3rem;
   }
 
+  .addOns {
+    padding: 3rem;
+  }
 
+  .addOns .para {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
 
+  .addOns .addOptions .onlineservices,
+  .addOns .addOptions .largerstorage,
+  .addOns .addOptions .profile {
+    margin-bottom: 3rem;
+  }
 
-.addOns {
-  padding: 3rem;
-}
+  .finish {
+    padding: 4rem;
+  }
 
+  .finish .para {
+    font-size: 16px;
+  }
 
-
-.addOns .para {
-  padding-right: 0;
-  margin-bottom: 3rem;
-}
-
-.addOns .addOptions .onlineservices,
-.addOns .addOptions .largerstorage,
-.addOns .addOptions .profile {
-  margin-bottom: 3rem;
-}
-
-.finish {
-  padding: 4rem;
-}
-
-.finish .para{
-  font-size: 16px;
-}
-
-
-.thanks img{
-  margin-top: 10rem;
-  height: 5rem;
-}
+  .thanks img {
+    margin-top: 10rem;
+    height: 5rem;
+  }
 }
